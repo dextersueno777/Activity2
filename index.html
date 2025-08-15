@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hi! My name is Dexter Sueno!</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #f0f0f0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image 0.5s ease;
+    }
+
+    header#mainHeader {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      color: #00ffff;
+      font-size: 2em;
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    }
+
+    .intro {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.4em;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      width: fit-content;
+      display: block;
+    }
+
+    .name-highlight {
+      font-weight: bold;
+      font-size: 1.4em;
+      background: linear-gradient(90deg, #00ffff, #00ff88, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px rgba(0,255,255,0.5), 0 0 10px rgba(0,255,255,0.3);
+      }
+      100% {
+        text-shadow: 0 0 15px rgba(0,255,255,0.8), 0 0 25px rgba(0,255,200,0.6);
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    #content-div h1, #content-div h2 {
+      text-align: center;
+      color: #00ffcc;
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #008080;
+      margin-top: 30px;
+    }
+
+    #content-div ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    #content-div ul li {
+      margin: 10px 0;
+      font-size: 1.1em;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    #content-div ul li:hover {
+      background: rgba(0, 255, 255, 0.3);
+    }
+
+    .btn-change-bg {
+      display: block;
+      margin: 40px auto 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffff;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-change-bg:hover {
+      background: #00cccc;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader">
+    <h1>I'm Back!</h1>
+  </header>
+
+  <!-- Centered introduction -->
+  <p class="intro">
+    Hi! My name is <span class="name-highlight">Dexter Sueno</span>.
+  </p>
+
+  <div class="container">
+    <div class="profile-pic">
+      <img src="dexter.gif" alt="Dexter" class="profile-img" />
+    </div>
+
+    <div id="content-div">
+      <h1>Advance Web Systems Technologies</h1>
+
+      <h2>Class Expectations</h2>
+      <ul>
+        <li>Be on time.</li>
+        <li>Join class discussions.</li>
+        <li>Finish assignments.</li>
+      </ul>
+
+      <h2>Subject Expectations</h2>
+      <ul>
+        <li>Learn advanced web tech.</li>
+        <li>Make responsive websites.</li>
+        <li>Practice PHP coding.</li>
+      </ul>
+
+      <h2>Future PHP Projects</h2>
+      <ul>
+        <li>Create a blog.</li>
+        <li>Make a content system.</li>
+        <li>Build an online store.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Background change button -->
+  <button class="btn-change-bg" onclick="changeBackground()">Change Background</button>
+
+  <script>
+    const gifs = ['1.gif', '2.gif', '3.gif'];
+
+    function changeBackground() {
+      const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+      document.body.style.backgroundImage = `url('${randomGif}')`;
+    }
+  </script>
+</body>
+</html>
